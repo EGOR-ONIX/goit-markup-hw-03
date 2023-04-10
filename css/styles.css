@@ -399,10 +399,11 @@ img {
 }
 .potrfolio-list-item {
   background-color: var(--bg);
-  border: 1px solid var(--border-cards);
-  border-top: none;
 }
 .portfolio-wrapper {
+  border: 1px solid var(--border-cards);
+  border-top: none;
+
   padding: 32px 16px;
 }
 .portfolio-cards-desc {
