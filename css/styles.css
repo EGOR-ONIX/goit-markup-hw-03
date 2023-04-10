@@ -123,8 +123,6 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--logo-txt-cl);
-
-  margin-right: 76px;
 }
 .container {
   width: 1158px;
@@ -141,7 +139,7 @@ img {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  column-gap: var(--indet);
+  column-gap: 24px;
   row-gap: 48px;
 }
 .card-set-item {
@@ -407,6 +405,7 @@ img {
 .potrfolio-list-item {
   background-color: var(--bg);
   border: 1px solid var(--border-cards);
+  border-top: none;
 }
 .portfolio-wrapper {
   padding: 32px 16px;
