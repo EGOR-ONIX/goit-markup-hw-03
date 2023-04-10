@@ -266,6 +266,9 @@ img {
 
 /* Features section */
 .features-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   --item: 4;
 }
 .features-list-item {
