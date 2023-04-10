@@ -290,10 +290,16 @@ img {
 
 /* Tasks section */
 .tasks-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   padding-top: 0;
 }
 .tasks-list {
   --item: 3;
+}
+.tasks-list-item {
+  width: calc((100% - 24px * 2) / 3);
 }
 
 /* Team section */
