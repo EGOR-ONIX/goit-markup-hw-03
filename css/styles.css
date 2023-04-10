@@ -130,6 +130,10 @@ img {
   margin: 0 auto;
   /* outline: 2px solid red; */
 }
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 
 /**
   |============================
@@ -139,11 +143,11 @@ img {
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
+  column-gap: var(--indet);
   row-gap: 48px;
 }
 .card-set-item {
-  width: calc(100%-var(--indet) * (var(--item)-1) / var(--item));
+  width: calc((100% - var(--indet) * (var(--item)-1)) / var(--item));
 }
 
 /**
@@ -169,7 +173,6 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--title-txt-cl);
@@ -262,10 +265,6 @@ img {
 }
 
 /* Features section */
-.features-section {
-  padding-top: 120px;
-  padding-bottom: 120px;
-}
 .features-list {
   --item: 4;
 }
@@ -288,18 +287,15 @@ img {
 
 /* Tasks section */
 .tasks-section {
-  padding-bottom: 120px;
+  padding-top: 0;
 }
 .tasks-list {
-  --team-composition: 3;
+  --item: 3;
 }
 
 /* Team section */
 .team-section {
   background-color: var(--light-bg);
-
-  padding-top: 120px;
-  padding-bottom: 120px;
 }
 .team-list {
   --item: 4;
@@ -344,7 +340,6 @@ img {
   font-weight: 800;
   font-size: 18px;
   line-height: 1.17;
-  align-items: center;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--light-bg);
