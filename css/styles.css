@@ -268,7 +268,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  --item: 4;
+  /* --item: 4; */
 }
 .features-list-item {
   display: flex;
@@ -295,7 +295,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  --item: 3;
+  /* --item: 3; */
 }
 .tasks-list-item {
   width: calc((100% - 24px * 2) / 3);
@@ -309,7 +309,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  --item: 4;
+  /* --item: 4; */
 }
 .team-list-item {
   background-color: var(--bg);
@@ -418,7 +418,8 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  --item: 3;
+  row-gap: 48px;
+  /* --item: 3; */
 }
 .potrfolio-list-item {
   background-color: var(--bg);
