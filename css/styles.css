@@ -1,11 +1,11 @@
 :root {
-  /* COLORS */
+  /* MAIN COLORS */
   --brand-cl: #4d5ae5;
   --accent-cl: #404bbf;
 
   /* FONTS */
-  --primary-font: "Roboto", sans-serif;
-  --additional-font: "Raleway", sans-serif;
+  --primary-font: 'Roboto', sans-serif;
+  --additional-font: 'Raleway', sans-serif;
 
   /* TXT COLORS */
   --primary-dark-txt-cl: #434455;
@@ -21,14 +21,14 @@
   /* BORDER COLORS */
   --border-cl: #e7e9fc;
 
-  /* OTHER */
+  /* CARD SET */
   --indent: 24px;
   --item: 1;
 }
 
 /**
   |============================
-  | BASE STYLE
+  | BASE STYLES
   |============================
 */
 
@@ -47,10 +47,9 @@ body {
   |============================
 */
 
-/* ! color: currentColor; */
 .link {
-  font-style: normal;
   text-decoration: none;
+  color: currentColor;
 }
 
 .list {
@@ -95,6 +94,7 @@ img {
 
 button {
   font-family: inherit;
+  color: currentColor;
 
   cursor: pointer;
 }
@@ -115,8 +115,8 @@ button {
 
   font-size: 36px;
   line-height: 1.11;
-  text-align: center;
   letter-spacing: 0.02em;
+  text-align: center;
   text-transform: capitalize;
   color: var(--additional-dark-txt-cl);
 }
@@ -155,7 +155,6 @@ button {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: currentColor;
 
   background-color: var(--brand-cl);
 }
@@ -180,7 +179,7 @@ button {
 
 /**
   |============================
-  | HEADER STYLE
+  | HEADER STYLES
   |============================
 */
 
@@ -191,6 +190,12 @@ button {
 .header-container {
   display: flex;
   align-items: center;
+}
+
+.header-link {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 23px;
 }
 
 .header-nav {
@@ -207,10 +212,6 @@ button {
 }
 
 .header-nav-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
   font-weight: 500;
   color: var(--additional-dark-txt-cl);
 }
@@ -221,14 +222,11 @@ button {
 
 .header-address-list {
   display: flex;
+  align-items: center;
   gap: 40px;
 }
 
 .header-address-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
   color: var(--primary-dark-txt-cl);
 }
 
@@ -249,28 +247,31 @@ button {
 /* HERO SECTION */
 
 .hero-section {
-  padding: 188px 0;
+  padding-top: 188px;
+  padding-bottom: 188px;
+
+  text-align: center;
 
   background-color: var(--dark-bg-cl);
 }
 
 .hero-title {
   max-width: 496px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
   margin-bottom: 48px;
 
   font-size: 56px;
   line-height: 1.07;
-  text-align: center;
   color: var(--primary-light-txt-cl);
 }
 
 .hero-btn {
-  display: block;
-  padding: 16px 32px;
-  margin: 0 auto;
   min-width: 169px;
-  height: 56px;
+  min-height: 56px;
+  padding: 16px 32px;
+  margin-right: auto;
+  margin-left: auto;
 
   color: var(--primary-light-txt-cl);
 
@@ -280,9 +281,13 @@ button {
   border-radius: 4px;
 }
 
-/*! .hero-btn:hover,.hero-btn:focus {} */
+/*! .hero-btn:hover,.hero-btn:focus {} === .btn:hover, .btn:focus */
 
 /* FEATURES SECTION */
+
+.features-section {
+  padding-bottom: 0;
+}
 
 .features-list {
   --item: 4;
@@ -292,24 +297,19 @@ button {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  width: 264px;
+  max-width: 264px;
 }
 
 .feature-subtitle {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.02em;
   color: var(--additional-dark-txt-cl);
 }
 
 /*! .feature-desc{} */
 
 /* PRODUCTS SECTION */
-
-.products-section {
-  padding-top: 0;
-}
 
 .products-list {
   --item: 3;
@@ -327,14 +327,15 @@ button {
 
 .team-item {
   background-color: var(--card-bg-cl);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-wrapper {
   padding: 32px 16px;
 
-  border-radius: 0px 0px 4px 4px;
+  text-align: center;
 }
 
 .team-subtitle {
@@ -343,31 +344,27 @@ button {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  text-align: center;
-  letter-spacing: 0.02em;
   color: var(--additional-dark-txt-cl);
 }
 
-.team-position {
-  text-align: center;
-  letter-spacing: 0.02em;
-}
+/*! .team-position {} */
 
 /* PORTFOLIO SECTION - PORTFOLIO PAGE */
 
 .portfolio-section {
-  padding: 96px 0 120px;
+  padding-top: 96px;
 }
 
 .filters-list {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: var(--indent);
   margin-bottom: 72px;
 }
 
 .filter-btn {
-  padding: 12px 24px;
+  padding: 11px 23px;
 
   color: var(--brand-cl);
 
@@ -380,11 +377,9 @@ button {
 .filter-btn:focus {
   color: var(--primary-light-txt-cl);
 
-  background-color: var(--accent-cl);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border: 1px solid transparent;
-  border-radius: 4px;
+  border-color: transparent;
 }
 
 .portfolio-list {
@@ -393,13 +388,11 @@ button {
 
 .portfolio-item {
   background-color: var(--card-bg-cl);
+  border: 1px solid var(--border-cl);
 }
 
 .portfolio-wrapper {
   padding: 32px 16px;
-
-  border: 1px solid var(--border-cl);
-  border-top: none;
 }
 
 .portfolio-subtitle {
@@ -422,9 +415,14 @@ button {
 */
 
 .footer {
-  padding: 100px 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   background-color: var(--dark-bg-cl);
+}
+
+.footer-wrapper {
+  max-width: 264px;
 }
 
 .footer-logo {
@@ -433,7 +431,5 @@ button {
 }
 
 .footer-desc {
-  max-width: 264px;
-
   color: var(--additional-light-txt-cl);
 }
